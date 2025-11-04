@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>AI-Powered Drowsiness Detector</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="glow">AI Drowsiness Detector</h1>
+
+    <div class="video-container">
+      <video id="video" autoplay playsinline webkit-playsinline></video>
+      <canvas id="hiddenCanvas" width="640" height="480"></canvas>
+      <div class="overlay"></div>
+    </div>
+
+    <div id="status">🧠 Status: <span id="state">Initializing...</span></div>
+    <div id="metrics">👁️ EAR: <span id="ear">-</span> | Frames below: <span id="frames">0</span></div>
+
+    <div class="controls">
+      <button id="startBtn" class="glow-btn">Start Detection</button>
+      <button id="stopBtn" disabled class="glow-btn danger">Stop</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>⚙️ Prototype built with <strong>AI Vision Tech</strong></p>
+  </footer>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
