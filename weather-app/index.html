@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <h1>Weather Now</h1>
+      <p class="sub">Real-time weather using OpenWeatherMap</p>
+    </header>
+
+    <section class="controls">
+      <div class="search">
+        <input id="cityInput" type="text" placeholder="Enter city " />
+        <button id="searchBtn" aria-label="Search">Search</button>
+      </div>
+      <div class="geo">
+        <button id="geoBtn" title="Use my current location">Use my location</button>
+      </div>
+    </section>
+
+    <section id="status" class="status">
+      <!-- Loading / Error text will appear here -->
+    </section>
+
+    <section id="cardContainer" class="card-container hidden" aria-live="polite">
+      <article id="weatherCard" class="card">
+        <div class="card-left">
+          <div id="iconWrap" class="icon-wrap">
+            <!-- Weather icon -->
+            <img id="weatherIcon" src="" alt="" />
+          </div>
+          <div class="temp-wrap">
+            <div id="temp" class="temp">--°C</div>
+            <div id="condition" class="condition">--</div>
+          </div>
+        </div>
+
+        <div class="card-right">
+          <div class="meta">
+            <div><strong>City</strong><div id="city" class="value">--</div></div>
+            <div><strong>Humidity</strong><div id="humidity" class="value">--%</div></div>
+            <div><strong>Wind</strong><div id="wind" class="value">-- m/s</div></div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <footer class="footer">
+      <small>Powered by <a href="https://openweathermap.org/" target="_blank" rel="noopener">OpenWeatherMap</a></small>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
